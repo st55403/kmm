@@ -43,11 +43,10 @@ kotlin {
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
+        all {
+            languageSettings.optIn("kotlin.experimental.ExperimentalObjCName")
+        }
     }
-}
-
-kotlin.sourceSets.all {
-    languageSettings.optIn("kotlin.experimental.ExperimentalObjCName")
 }
 
 android {
